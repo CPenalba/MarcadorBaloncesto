@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/imagen_canchados">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTintMode="screen"
+        android:isScrollContainer="true">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="1dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+    <TextView
+        android:id="@+id/textViewLocal"
+        android:layout_width="182dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/border"
+        android:gravity="center|bottom"
+        android:text="LOCAL"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@id/startGuideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewVisitante"
+        android:layout_width="182dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/border"
+        android:gravity="center|bottom"
+        android:text="VISITANTE"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/endGuideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewPantallaLocal"
+        android:layout_width="91dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/border_text"
+        android:gravity="center|bottom"
+        android:textColor="#FF0000"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewLocal"
+        app:layout_constraintStart_toStartOf="@+id/textViewLocal"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLocal" />
+
+    <TextView
+        android:id="@+id/textViewPantallaVisitante"
+        android:layout_width="91dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/border_text"
+        android:gravity="center|bottom"
+        android:textColor="#FF0000"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewVisitante"
+        app:layout_constraintStart_toStartOf="@+id/textViewVisitante"
+        app:layout_constraintTop_toBottomOf="@+id/textViewVisitante" />
+
+    <TextView
+        android:id="@+id/textViewPersonales"
+        android:layout_width="182dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/border"
+        android:gravity="center|bottom"
+        android:text="PERSONALES"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/textViewLocal"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPantallaLocal" />
+
+    <Button
+        android:id="@+id/buttonBorrarPersonales"
+        android:layout_width="85dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/border_button"
+        android:gravity="center"
+        android:text="RESET"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewVisitante"
+        app:layout_constraintStart_toEndOf="@+id/textViewPersonales"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPantallaVisitante" />
+
+    <TextView
+        android:id="@+id/textViewPersonalesAtaque"
+        android:layout_width="85dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/border_text3"
+        android:gravity="center|bottom"
+        android:textColor="#FF0000"
+        android:textSize="35sp"
+        app:layout_constraintStart_toStartOf="@+id/textViewLocal"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPersonales" />
+
+    <Button
+        android:id="@+id/buttonMenosUnoPersonalesAtaque"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/border_button"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:text="-1"
+        app:layout_constraintStart_toEndOf="@+id/textViewPersonalesAtaque"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPersonales" />
+
+    <TextView
+        android:id="@+id/textViewPersonalesDefensa"
+        android:layout_width="85dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/border_text4"
+        android:gravity="center|bottom"
+        android:textColor="#FF0000"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toStartOf="@+id/endGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBorrarPersonales" />
+
+    <Button
+        android:id="@+id/buttonMenosUnoPersonalesDefensa"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/border_button"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:text="-1"
+        app:layout_constraintEnd_toStartOf="@+id/textViewPersonalesDefensa"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBorrarPersonales" />
+
+    <TextView
+        android:id="@+id/textViewAtacaVisitante"
+        android:layout_width="365dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/border"
+        android:gravity="left|bottom"
+        android:text="  ATACA VISITANTE:"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewVisitante"
+        app:layout_constraintStart_toStartOf="@+id/textViewLocal"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPersonalesAtaque" />
+
+    <Button
+        android:id="@+id/buttonMasUnoVisitante"
+        android:layout_width="74dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/border_button"
+        android:text="+1"
+        app:layout_constraintStart_toStartOf="@+id/textViewLocal"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAtacaVisitante" />
+
+    <Button
+        android:id="@+id/buttonMasDosVisitante"
+        android:layout_width="74dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/border_button"
+        android:text="+2"
+        app:layout_constraintStart_toEndOf="@+id/buttonMasUnoVisitante"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAtacaVisitante" />
+
+    <Button
+        android:id="@+id/buttonMasTresVisitante"
+        android:layout_width="74dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/border_button"
+        android:text="+3"
+        app:layout_constraintStart_toEndOf="@+id/buttonMasDosVisitante"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAtacaVisitante" />
+
+    <Button
+        android:id="@+id/buttonMenosUnoVisitante"
+        android:layout_width="74dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/border_button"
+        android:text="-1"
+        app:layout_constraintEnd_toEndOf="@+id/textViewVisitante"
+        app:layout_constraintStart_toEndOf="@+id/buttonMasTresVisitante"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAtacaVisitante" />
+
+    <Button
+        android:id="@+id/buttonMasUnoPersonalesDefensa"
+        android:layout_width="150dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="30dp"
+        android:textSize="17dp"
+        android:background="@drawable/border_button"
+        android:textColor="@color/black"
+        android:text="PER. DEFENSA"
+        app:layout_constraintStart_toStartOf="@+id/textViewPersonalesAtaque"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMasUnoVisitante" />
+
+    <Button
+        android:id="@+id/buttonMasUnoPersonalesAtaque"
+        android:layout_width="150dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="4dp"
+        android:textSize="17dp"
+        android:background="@drawable/border_button"
+        android:textColor="@color/black"
+        android:text="PER. ATAQUE"
+        app:layout_constraintEnd_toStartOf="@+id/endGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMenosUnoVisitante" />
+
+    <Button
+        android:id="@+id/buttonCambioPosesionVisitante"
+        android:layout_width="200dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/border_button"
+        android:text="CAMBIO POSESIÓN"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="@+id/textViewLocal"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMasUnoPersonalesDefensa" />
+
+    <Button
+        android:id="@+id/buttonBorrarTodo"
+        android:layout_width="85dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/border_button"
+        android:gravity="center"
+        android:text="RESET"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/buttonCambioPosesionVisitante"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMasUnoPersonalesAtaque" />
+
+    <TextView
+        android:id="@+id/textViewPosesion"
+        android:layout_width="365dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="9dp"
+        android:background="@drawable/border"
+        android:gravity="center|bottom"
+        android:text="POSESIÓN"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewVisitante"
+        app:layout_constraintStart_toStartOf="@+id/textViewLocal"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCambioPosesionVisitante" />
+
+        <TextView
+            android:id="@+id/textViewTiempo"
+            android:layout_width="85dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="00:00"
+            android:textSize="24sp"
+            android:textColor="#FF0000"
+            android:background="@drawable/border_text4"
+            app:layout_constraintEnd_toEndOf="@+id/textViewPosesion"
+            app:layout_constraintStart_toStartOf="@+id/textViewPosesion"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPosesion" />
+
+        <Button
+            android:id="@+id/buttonPausa"
+            android:layout_width="130dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/border_button"
+            android:gravity="center"
+            android:text="PAUSA"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="@+id/textViewPosesion"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTiempo" />
+
+        <Button
+            android:id="@+id/buttonCatorce"
+            android:layout_width="85dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/border_button"
+            android:gravity="center"
+            android:text="14"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="@+id/textViewPosesion"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintStart_toEndOf="@+id/buttonPausa"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTiempo" />
+
+        <Button
+            android:id="@+id/buttonPlay"
+            android:layout_width="130dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/border_button"
+            android:gravity="center"
+            android:text="PLAY"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="@+id/textViewPosesion"
+            app:layout_constraintTop_toBottomOf="@+id/buttonPausa" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
